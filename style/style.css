@@ -139,8 +139,6 @@
   /* section */
 
 .section-title {
-  margin-top: 0;
-  margin-bottom: 30px;
   color: #000000;
   font-size: 30px;
   line-height: 36px;
@@ -158,13 +156,11 @@
 
 .advantages {
   text-align: center;
-  padding: 63px 240px 80px;
-
-
 }
 .advantages-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .advantages-list-inner {
@@ -231,10 +227,16 @@
 /* breadcrumbs */
 
 .breadcrumbs {
-  font-size: 16px;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  margin-bottom: 45px;
+  font-size: 16px;
+
+  list-style-type: none;
 }
+
 
 
 /* form */
@@ -266,6 +268,7 @@
 .filter-list {
   margin: 0;
   padding: 0;
+  list-style-type: none;
 }
 
 .filter-fieldset {
@@ -311,6 +314,8 @@
 .catalog-sort {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 44px 0;
 }
 
 .catalog-title {
@@ -327,9 +332,20 @@
 .view {
   margin: 0;
   padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
 }
 
+.view-item {
+  margin: 0 4px;
+}
+.view-link {
+  display: block;
+  width: 48px;
+  height: 48px;
 
+}
 /* card */
 
 .card-title {
@@ -352,18 +368,37 @@
 .pagination-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .pagination-list {
   display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  list-style-type: none;
+
+}
+
+.pagination-item {
+  margin: 0 4px;
 }
 
 .pagination-select {
   display: flex;
 }
+
+.select-label {
+  margin: 0;
+  margin-right: 51px;
+}
 .pagination-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 55px;
   color: #ffffff;
   background-color: #83B3D3;
   font-size: 20px;
@@ -375,14 +410,23 @@
 .page-footer {
   display: flex;
   justify-content: space-between;
-  padding: 0 72px;
+  padding: 40px 72px;
 }
 
 .footer-social {
+
   margin: 0;
-  padding: 0;
+
 }
 
+.social-item {
+  margin: 0 2px;
+}
+.social-link {
+  display: block;
+  width: 40px;
+  height: 40px;
+}
 .footer-phone {
   color: #000000;
 
@@ -394,5 +438,9 @@
 /* social */
 
 .social {
+  display: flex;
+  flex-wrap: wrap;
   padding: 0;
+  list-style-type: none;
+
 }
