@@ -12,6 +12,11 @@
   src: url(../fonts/ptsans-700.woff2) format(woff2);
   font-display: swap;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+}
 .page {
   height: 100%;
   background-color: #F2F2F2;
@@ -61,20 +66,22 @@
 /* header */
 
 .header-nav {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: max-content 1fr max-content;
   padding: 0 72px;
+  min-height: 66px;
+  gap: 30px;
 }
 
 .header-logo {
-  display: block;
-  margin-right: 30px;
+  position: relative;
+  margin-bottom: -10px;
 }
 .site-menu {
   display: flex;
   flex-wrap: wrap;
   flex-grow: 1;
-  margin: 0 30px;
+  margin: 0 ;
   padding: 0;
   font-size: 20px;
   line-height: 26px;
@@ -95,9 +102,11 @@
 }
 
 .additionally-menu {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  justify-content: end;
 
 }
 
@@ -105,9 +114,9 @@
   margin-left: 20px;
 }
 .button-icon {
-  min-width: 42px;
-  min-height: 66px;
-  padding: 2;
+  display: block;
+  width: 42px;
+  height: 42px;
 }
 /* main */
 
@@ -158,25 +167,37 @@
   text-align: center;
 }
 .advantages-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
+
 .advantages-list-inner {
+  grid-column: 1/-1;
   color: #333333;
   background-color: #ffffff;
 }
 
 .advantages-item {
+  padding: 75px;
   background-color: rgba(131, 179, 211, 0.12);
 }
 
+.advantages-description {
+  padding: 75px;
+}
 .advantages-item:not(.advantages-item-large):nth-child(even) {
   background-color: rgba(131, 179, 211, 0.2);
 }
 
 .advantages-item-large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1/-1;
+  padding: 0;
   color: #ffffff;
   background-color: #83B3D3;
 }
@@ -185,6 +206,13 @@
   background-color: #ffffff;
 }
 
+.advantages-img {
+  grid-column: span 2;
+  width: 100%;
+  height: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
 .advantages-title {
   font-size: 24px;
   line-height: 28px;
@@ -193,7 +221,8 @@
   text-transform: uppercase;
 }
 
-.advantages-item-large>.advantages-title {
+.advantages-description
+.advantages-title {
   color: #ffffff;
 }
 
@@ -249,20 +278,35 @@
 
 /* range */
 
+.range {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.range-field {
+  display: grid;
+  grid-template-columns: 1fr 44px;
+}
 .range-input {
+  grid-column: 1/-1;
+  grid-row: 1/2;
   font-family: inherit;
   font-size: 18px;
   color: #ffffff;
   background-color: transparent;
 }
 .range-title {
+  grid-column: -2/-1;
+  grid-row: 1/2;
   opacity: 0.3;
 }
 
 /* filter */
 
 .filter-form {
-  display: flex;
+  display: grid;
+  grid-template-columns: 200px 200px 1fr 223px;
+  gap: 17px;
 }
 
 .filter-list {
@@ -272,15 +316,12 @@
 }
 
 .filter-fieldset {
-  width: 200px;
   margin: 0;
   padding: 0;
-  margin-right: 17px;
 }
 
 .filter-fieldset-price {
-  width: 287px;
-  margin-left: 95px;
+  margin-left: 96px;
 }
 
 .filter-reset {
@@ -300,8 +341,7 @@
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  width: 160px;
-  margin-left: 64px;
+  margin-left: 80px;
 }
 
 /* Catalog */
@@ -348,7 +388,33 @@
 }
 /* card */
 
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px 10px;
+}
+.card {
+  display: grid;
+  grid-template-columns: 1fr 26px 1fr;
+  grid-template-rows: 206px;
+  grid-template-areas: "image image image"
+                       "title title title"
+                       "description description description"
+                       "button-more . button-chosen"
+                       "stars rate rate";
+                       row-gap: 16px;
+  padding: 20px;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  grid-area: image;
+  object-fit: cover;
+}
+
 .card-title {
+  grid-area: title;
   font-size: 24px;
   line-height: 31px;
 }
@@ -358,11 +424,32 @@
   text-decoration: none;
 }
 
+.card-description {
+  grid-area: description;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  margin: 0;
+}
+
+.card-chosen {
+  grid-area: button-chosen;
+
+}
+
+.card-more {
+  grid-area: button-more;
+}
 .card-rate {
+  grid-area: rate;
   font-size: 16px;
   text-transform: uppercase;
 }
 
+.card-rate {
+  grid-area: rate;
+  margin: 0;
+}
 /* pagination */
 
 .pagination-nav {
