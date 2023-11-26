@@ -1260,6 +1260,9 @@ justify-content: center;
   background-color: rgba(242, 242, 242, 0.80);
 }
 
+.modal-content {
+  grid-column: 1 / -1;
+}
 .modal-container {
   display: grid;
   grid-template-columns: 1fr min-content;
