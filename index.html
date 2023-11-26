@@ -106,7 +106,7 @@
           </li>
           <li class="advantages-item">
             <div class="advantages-description">
-            <h3 class="advantages-title">Красивая
+            <h3 class="advantages-title">Красивая<br>
               дорога</h3>
             <p class="advantages-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
           </div>
@@ -114,7 +114,7 @@
           <li class="advantages-item">
             <div class="advantages-description">
 
-            <h3 class="advantages-title">Мало
+            <h3 class="advantages-title">Мало<br>
               туристов</h3>
             <p class="advantages-text">Большинство едет в Гранд Каньон и толпится там</p>
           </div>
@@ -204,5 +204,74 @@
 
 
     </footer>
+
+    <section class="modal">
+      <div class="modal-container">
+        <h2 class="modal-title section-title">Поиск гостиницы в Седоне</h2>
+        <button class="modal-close" type="button">
+          <span class="visually-hidden">Закрыть окно</span>
+        </button>
+
+        <form class="modal-content search-form" action="">
+
+          <div class="search-form-data  field-search">
+            <label class="field-title" for="data-in">Дата заезда:</label>
+            <input class="field-input" type="text" name="data-in" id="data-in" value="27 апреля 2020" placeholder="Укажите дату">
+            <span class="field-message field-message-error">
+              Мы не можем отправить вас в прошлое.
+            </span>
+          </div>
+
+          <div class="search-form-data  field-search">
+            <label class="field-title" for="data-out">Дата выезда:</label>
+            <input class="field-input" type="text" name="data-out" id="data-out" value="1 сентября 2021" placeholder="Укажите дату">
+            <span class="field-message">
+              На эти даты есть свободные номера. Пока есть.
+            </span>
+          </div>
+
+          <div class="search-form-amount field-search">
+            <label class="field-title" for="adults">Взрослые:</label>
+
+            <div class="number">
+              <button class="number-button number-button-minus" type="button ">
+                <span class="visually-hidden">Уменьшить количево</span>
+              </button>
+              <input class="number-input field-input" type="number" name="adults-amount" id="adults" value="2" min="1" step="1">
+              <button class="number-button number-button-plus" type="button">
+                <span class="visually-hidden">Увеличить количево</span>
+              </button>
+            </div>
+
+          </div>
+
+
+          <div class="search-form-amount field-search ">
+            <span class="field-title field-title-info">
+              <label for="children">Дети:</label>
+              <span class="field-info">
+                <span class="field-text-info">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
+              </span>
+            </span>
+
+            <div class="number">
+              <button class="number-button number-button-minus" type="button ">
+                <span class="visually-hidden">Уменьшить количево</span>
+              </button>
+              <input class="number-input field-input" type="number" name="adults-children" id="children" value="1" min="0" step="1">
+              <button class="number-button number-button-plus" type="button" >
+                <span class="visually-hidden">Увеличить количево</span>
+              </button>
+            </div>
+          </div>
+
+
+
+
+          <button class="search-form-button button button-large" type="button">Найти</button>
+        </form>
+
+      </div>
+    </section>
   </body>
 </html>
