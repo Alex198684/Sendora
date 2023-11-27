@@ -555,6 +555,13 @@ background-image: url(../images/icon/house.svg);
   outline: 3px solid #83B3D3 ;
   outline-offset: 0;
 }
+
+.search-form-data .field-input:active {
+  border: 2px solid #000000;
+  background-color: #ffffff;
+  outline: none;
+
+}
 /* range */
 
 .range {
@@ -1308,6 +1315,10 @@ justify-content: center;
   background-position: 50% 50%;
   background-image: url(../images/icon/modal-close.svg);
 }
+
+.modal-close:hover {
+  background-color: #E6E6E6;
+}
 .search-form {
   display: grid;
   grid-template-columns: 50% 1fr;
@@ -1437,7 +1448,7 @@ justify-content: center;
 .number-button {
   position: relative;
   border: none;
-
+  z-index: 1;
   display: grid;
   align-content: center;
   justify-content: center;
@@ -1452,23 +1463,42 @@ justify-content: center;
   background-position: 50% 50%;
   background-repeat: no-repeat;
   opacity: 0.3;
+  border-radius: 4px;
 }
 
 
 .number-button-minus {
-  grid-column: 1/2;
-}
-
-.number-button-plus {
-  grid-column: -2/-1;
+  grid-column: 1 / 2;
 }
 
 .number-button-minus::after {
   background-image: url(../images/icon/minus.svg);
 }
 
+.number-button-plus {
+  grid-column: -2 / -1;
+}
+
+
+
 .number-button-plus::after {
   background-image: url(../images/icon/plus.svg );
 }
 
+.number-button:hover::after {
+  opacity: 1;
+}
 
+.number-button:active::after {
+  opacity: 0.2;
+}
+
+.number-button:focus {
+  outline: none;
+}
+
+.number-button:focus:not(:active)::after {
+  outline: 3px solid #83B3D3;
+  opacity: 1;
+  outline-offset: -3px;
+}
