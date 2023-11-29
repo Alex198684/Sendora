@@ -250,7 +250,7 @@ background-size:
     cover;
 background-image:
     url(../images/welcome\ .svg),
-    url(../images/icon/divider\ \(1\).svg),
+    url(../images/icon/divider.svg),
     url(../images/background/promo.jpg);
   }
 
@@ -275,7 +275,7 @@ background-image:
 
 .section-title {
   margin: 0;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   color: #000000;
   font-size: 30px;
   line-height: 36px;
@@ -454,9 +454,7 @@ background-image:
   text-align: center;
 }
 
-.subscribe .section-title {
-  margin-bottom: 48px;;
-}
+
 .subscribe-form {
   display: grid;
   grid-template-columns: 1fr 200px;
@@ -467,6 +465,8 @@ background-image:
 }
 
 .subscribe-primary {
+  padding-top: 94px;
+  padding-bottom: 94px;
   color: #ffffff;
   background-color: #83B3D3;
   background-image: url(../images/background/subscription.jpg);
@@ -1184,7 +1184,7 @@ background-image:
   grid-template-columns: 1fr max-content 1fr;
   gap: 30px;
   align-items: center;
-  padding: 40px 72px 30px;
+  padding: 40px 72px 40px;
 }
 
 .footer-social {
