@@ -1329,6 +1329,15 @@ justify-content: center;
 .modal-close:hover {
   background-color: #E6E6E6;
 }
+
+.modal-close:not(:active):focus {
+  outline: 3px solid #83B3D3;
+
+}
+
+.modal-close:active::after {
+  opacity: 0.3;
+}
 .search-form {
   display: grid;
   grid-template-columns: 50% 1fr;
