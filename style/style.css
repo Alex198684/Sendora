@@ -131,18 +131,18 @@ img {
   display: grid;
   grid-template-columns: max-content 1fr max-content;
   padding: 0 72px;
-  min-height: 66px;
+  min-height: 65px;
   gap: 30px;
 }
 
 .header-logo {
   position: relative;
   margin-bottom: -10px;
+  z-index: 1;
 }
 .site-menu {
   display: flex;
   flex-wrap: wrap;
-  flex-grow: 1;
   margin: 0 ;
   padding: 0;
   font-size: 20px;
@@ -314,15 +314,16 @@ background-image:
 .advantages-item {
   display: grid;
   gap: 30px;
-min-height: 384px;
+  min-height: 384px;
   background-color: rgba(131, 179, 211, 0.12);
   counter-increment: advantages;
 }
 
 
 .advantages-item-large {
-  grid-template-columns: repeat(3, 1fr);
+
   grid-column: 1/-1;
+  grid-template-columns: repeat(3, 1fr);
   gap: 0;
   padding: 0;
   color: #ffffff;
@@ -332,72 +333,26 @@ min-height: 384px;
 .advantages-item:not(.advantages-item-large):nth-child(even) {
   background-color: rgba(131, 179, 211, 0.2);
 }
+
+
 .advantages-description {
   display: grid;
-  align-self: start;
-  gap: 30px;
+  align-content: start;
+  gap: 26px;
   min-height: 384px;
-  padding: 97px 75px 87px
+  padding: 60px;
+  padding-top: 98px;
 }
 
 .advantages-description::before {
-  content: "- №" counter(advantages) " -";
+  content: "— №" counter(advantages) " —";
 }
-
-.advantages-inner-item:nth-child(even) {
-  background-color: #ffffff;
-}
-
-.advantages-img {
-  grid-column: span 2;
-  width: 100%;
-  height: 0;
-  min-height: 100%;
-  object-fit: cover;
-}
-
-.advantages-item-large:nth-child(2) .advantages-img{
-  order: -1;
-}
-.advantages-title {
-margin: 0;
-  font-size: 24px;
-  line-height: 28px;
-  font-weight: 700;
-  color: #000000;
-  text-transform: uppercase;
-}
-
-.advantages-item-large
-.advantages-title {
-  color: #ffffff;
-}
-
-.advantages-inner-item .advantages-title {
-  color: #000000;
-}
-
-.advantages-description .advantages-title {
-  order: -2;
-}
-.advantages-inner-item-house {
-background-image: url(../images/icon/house.svg);
-
-}
-.advantages-inner-item-food {
-  background-image: url(../images/icon/food.svg);
-
-}
-
-.advantages-inner-item-present {
-  background-image: url(../images/icon/present\ .svg);
-}
-
 
 .advantages-list-inner {
-  grid-column: 1/-1;
-  grid-template-columns: repeat(3, 1fr);
+  grid-column: 1 / -1;
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
   margin: 0;
   padding: 0;
   color: #333333;
@@ -412,12 +367,67 @@ background-image: url(../images/icon/house.svg);
   align-content: start;
   gap: 20px;
   min-height: 384px;
-  padding: 75px;
+  padding: 60px;
   padding-top: 184px;
   background-repeat: no-repeat;
   background-size: 76px 76px;
-  background-position: 50% 84px;
+  background-position: 50% 85px;
   background-color: rgba(131, 179, 211, 0.12);
+}
+
+
+.advantages-inner-item:nth-child(even) {
+  background-color: #ffffff;
+}
+
+
+.advantages-inner-item-house {
+  background-image: url(../images/icon/house.svg);
+
+  }
+  .advantages-inner-item-food {
+    background-image: url(../images/icon/food.svg);
+
+  }
+
+  .advantages-inner-item-present {
+    background-image: url(../images/icon/present\ .svg);
+  }
+
+.advantages-title {
+    margin: 0;
+      font-size: 24px;
+      line-height: 28px;
+      font-weight: 700;
+      color: #000000;
+      text-transform: uppercase;
+    }
+
+
+    .advantages-item-large .advantages-title {
+      color: #ffffff;
+    }
+
+    .advantages-inner-item .advantages-title {
+      color: #000000;
+    }
+
+    .advantages-description .advantages-title {
+      order: -1;
+}
+
+
+
+.advantages-img {
+  grid-column: span 2;
+  width: 100%;
+  height: 0;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+.advantages-item-large:nth-child(2) .advantages-img{
+  order: -1;
 }
 
 
@@ -553,10 +563,9 @@ background-image: url(../images/icon/house.svg);
 .field-input:focus {
   background-color: #E6E6E6;
   outline: 3px solid #83B3D3 ;
-  outline-offset: 0;
 }
 
-.search-form-data .field-input:active {
+.field-input:active {
   border: 2px solid #000000;
   background-color: #ffffff;
   outline: none;
@@ -1271,6 +1280,7 @@ justify-content: center;
   left: 0;
   right: 0;
   bottom: 0;
+  display: none;
   align-content: center;
   justify-content: center;
   background-color: rgba(242, 242, 242, 0.80);
