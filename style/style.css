@@ -256,7 +256,7 @@ background-image:
 
 
   .main-header {
-    padding: 35px 72px 83px;
+    padding: 35px 72px 73px;
     color: #ffffff;
     background-color: #83B3D3;
 
@@ -460,6 +460,10 @@ background-image:
   grid-template-columns: 1fr 200px;
   margin-top: 46px;
 }
+
+.subscribe .section-title {
+  margin-bottom: 46px;
+}
 .subscribe-primary .section-title {
   color: #ffffff;
 }
@@ -478,7 +482,8 @@ background-image:
 .breadcrumbs {
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin-top: -10px;
+  margin-left: -8px;
   padding: 0;
   margin-bottom: 45px;
   font-size: 16px;
@@ -839,7 +844,7 @@ background-image:
 .filter-buttons {
   display: flex;
   flex-direction: column;
-  margin-left: 80px;
+  margin-left: 62px;
   margin-top: 60px;
 
 }
@@ -931,7 +936,8 @@ background-image:
 .card-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 18px 10px;
+  column-gap: 18px;
+  row-gap:  10px;
   padding: 0 0 34px;
 }
 .card {
@@ -1051,7 +1057,7 @@ background-image:
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 30px 0;
+  padding: 27px 0;
   border-top: 1px solid #F2F2F2;
 }
 
@@ -1064,6 +1070,7 @@ background-image:
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-right: 11px;
   margin-top: 30px;
   padding-top: 30px;
   border-top: 1px solid #F2F2F2;
@@ -1184,7 +1191,7 @@ background-image:
   grid-template-columns: 1fr max-content 1fr;
   gap: 30px;
   align-items: center;
-  padding: 40px 72px 40px;
+  padding: 27px 72px 25px;
 }
 
 .footer-social {
@@ -1244,6 +1251,7 @@ justify-content: center;
 }
 .footer-developer {
   display: block;
+  margin-right: -10px;
   justify-self: end;
   padding: 10px;
   border-radius: 10px;
@@ -1269,6 +1277,7 @@ justify-content: center;
 .social {
   display: flex;
   flex-wrap: wrap;
+  margin-left: -13px;
   padding: 0;
   list-style-type: none;
 
