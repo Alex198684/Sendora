@@ -294,7 +294,7 @@ img {
   margin: 0;
 
   font-size: 22px;
-  line-height: 26px;
+  line-height: 36px;
 }
 
 
@@ -343,7 +343,7 @@ img {
 .advantages-description {
   display: grid;
   align-content: start;
-  gap: 26px;
+  gap: 30px;
   min-height: 384px;
   padding: 60px;
   padding-top: 98px;
