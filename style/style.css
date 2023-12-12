@@ -340,7 +340,7 @@ img {
 }
 
 
-.advantages-description 
+.advantages-description {
   display: grid;
   align-content: start;
   gap: 30px;
