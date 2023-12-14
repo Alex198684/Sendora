@@ -470,12 +470,15 @@ img {
 }
 
 .subscribe .section-title {
-  margin-bottom: 32px;
+  margin-bottom: 46px;
 }
 
 .subscribe-primary .section-title {
   color: #ffffff;
+  margin-bottom: 32px;
 }
+
+
 
 .subscribe-primary {
   padding-top: 94px;
