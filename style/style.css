@@ -124,7 +124,7 @@ img {
 }
 
 .button-large {
-  padding: 15px 0;
+  padding: 15px 15px;
   font-size: 20px;
   border-radius: 10px;
 }
@@ -228,6 +228,8 @@ img {
   padding: 3px 4px;
   top: 4px;
   left: 24px;
+  min-width: 20px;
+  height: 20px;
   text-align: center;
   background-color: #7db54f;
   font-size: 10px;
@@ -783,7 +785,6 @@ img {
 }
 
 .control-input[type="checkbox"]:focus + .control-label::before {
-  background-color: rgba(255, 255, 255, 0.6);
   outline: 3px solid #83b3d3;
 }
 
@@ -870,14 +871,15 @@ img {
 }
 
 .catalog-sort {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 287px max-content;
+  gap: 80px;
   align-items: center;
   padding: 44px 0 53px;
 }
 
 .catalog-title {
   margin: 0;
-  width: 50%;
 }
 
 .catalog-select {
@@ -887,6 +889,7 @@ img {
 
 /* view */
 .view {
+  max-width: 225px;
   margin: 0;
   margin-left: auto;
   padding: 0;
@@ -896,7 +899,7 @@ img {
 }
 
 .view-item {
-  margin: 0 4px;
+  margin: 4px;
 }
 
 .view-link {
@@ -1061,7 +1064,7 @@ img {
 
 .pagination-button {
   min-width: 620px;
-  padding: 17px 0;
+  border-radius: 4px;
 }
 
 .pagination-nav {
@@ -1084,12 +1087,13 @@ img {
 }
 
 .pagination-item {
-  margin: 0 4px;
+  margin: 4px;
 }
 
 
 .pagination-select {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 160px;
   align-items: center;
 }
 
@@ -1142,7 +1146,6 @@ img {
 
   margin: 0;
   margin-right: 51px;
-  flex-shrink: 0;
 }
 
 .pagination-link {
